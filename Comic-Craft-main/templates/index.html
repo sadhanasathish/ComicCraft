@@ -1,0 +1,222 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1"
+    >
+
+    <title>{{ title }}</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', path='css/style.css') }}"
+    >
+
+</head>
+
+
+<body>
+
+
+<main class="container">
+
+
+    <section class="hero">
+
+        <p class="eyebrow">
+            AI COMIC GENERATOR
+        </p>
+
+        <h1>
+            ComicCraft
+        </h1>
+
+        <p>
+            Turn one story idea into
+            a five-panel illustrated comic.
+        </p>
+
+    </section>
+
+
+
+    <form
+        class="card form-card"
+        method="post"
+        action="/generate"
+    >
+
+
+        <!-- STORY -->
+
+        <label for="story_prompt">
+            Story Prompt
+        </label>
+
+
+        <textarea
+            id="story_prompt"
+            name="story_prompt"
+            rows="5"
+            maxlength="2000"
+            placeholder="A student discovers a tiny robot in the college library..."
+            required
+        ></textarea>
+
+
+
+        <!-- CHARACTER -->
+
+        <label for="character_name">
+            Main Character Name
+        </label>
+
+
+        <input
+            id="character_name"
+            name="character_name"
+            maxlength="80"
+            placeholder="Maya"
+            required
+        >
+
+
+
+        <!-- SETTING -->
+
+        <label for="setting">
+            Setting
+        </label>
+
+
+        <select
+            id="setting"
+            name="setting"
+        >
+
+            <option>
+                School
+            </option>
+
+            <option>
+                College
+            </option>
+
+            <option>
+                Forest
+            </option>
+
+            <option>
+                City
+            </option>
+
+            <option>
+                Space
+            </option>
+
+            <option>
+                Custom
+            </option>
+
+        </select>
+
+
+
+        <!-- TONE -->
+
+        <label for="tone">
+            Story Tone
+        </label>
+
+
+        <select
+            id="tone"
+            name="tone"
+        >
+
+            <option>
+                Funny
+            </option>
+
+            <option>
+                Light-hearted
+            </option>
+
+            <option>
+                Dramatic
+            </option>
+
+            <option>
+                Poetic
+            </option>
+
+            <option>
+                Adventure
+            </option>
+
+        </select>
+
+
+
+        <!-- ART STYLE -->
+
+        <label for="art_style">
+            Art Style
+        </label>
+
+
+        <select
+            id="art_style"
+            name="art_style"
+        >
+
+            <option>
+                Comic book
+            </option>
+
+            <option>
+                Anime
+            </option>
+
+            <option>
+                Pixel art
+            </option>
+
+            <option>
+                Realistic
+            </option>
+
+            <option>
+                Watercolor
+            </option>
+
+        </select>
+
+
+
+        <button type="submit">
+            Create My Comic
+        </button>
+
+
+        <p class="hint">
+            Local Stable Diffusion generation
+            may take several minutes.
+        </p>
+
+
+    </form>
+
+
+</main>
+
+
+</body>
+
+</html>

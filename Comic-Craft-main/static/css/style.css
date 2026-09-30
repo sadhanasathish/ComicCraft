@@ -1,0 +1,348 @@
+:root {
+
+    font-family:
+        Inter,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    color: #202020;
+
+    background: #f5f1e8;
+}
+
+
+* {
+
+    box-sizing: border-box;
+
+}
+
+
+body {
+
+    margin: 0;
+
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at top left,
+            #fff7df 0,
+            transparent 35%
+        ),
+        #f5f1e8;
+}
+
+
+.container {
+
+    width: min(
+        760px,
+        calc(100% - 32px)
+    );
+
+    margin: 0 auto;
+
+    padding: 48px 0;
+
+}
+
+
+.container.wide {
+
+    width: min(
+        980px,
+        calc(100% - 32px)
+    );
+
+}
+
+
+.hero {
+
+    text-align: center;
+
+    margin-bottom: 28px;
+
+}
+
+
+.eyebrow {
+
+    letter-spacing: .14em;
+
+    font-size: .78rem;
+
+    font-weight: 800;
+
+}
+
+
+h1 {
+
+    font-size:
+        clamp(
+            2.2rem,
+            6vw,
+            4rem
+        );
+
+    margin: 8px 0;
+
+}
+
+
+h2 {
+
+    margin: 0;
+
+}
+
+
+.card {
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            .94
+        );
+
+    border:
+        1px solid #e2ddcf;
+
+    border-radius: 22px;
+
+    box-shadow:
+        0 12px 35px
+        rgba(
+            50,
+            40,
+            20,
+            .08
+        );
+
+    padding: 24px;
+
+    margin-bottom: 24px;
+
+}
+
+
+.form-card {
+
+    display: grid;
+
+    gap: 10px;
+
+}
+
+
+label {
+
+    font-weight: 750;
+
+    margin-top: 8px;
+
+}
+
+
+input,
+textarea,
+select {
+
+    width: 100%;
+
+    border:
+        1px solid #cfc8b7;
+
+    border-radius: 12px;
+
+    padding:
+        12px
+        14px;
+
+    font: inherit;
+
+    background: white;
+
+}
+
+
+button,
+.button {
+
+    display: inline-block;
+
+    border: 0;
+
+    border-radius: 12px;
+
+    padding:
+        13px
+        18px;
+
+    margin-top: 12px;
+
+    background: #222;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-weight: 750;
+
+    cursor: pointer;
+
+}
+
+
+.hint {
+
+    color: #6b675d;
+
+    font-size: .9rem;
+
+}
+
+
+.panel-heading {
+
+    display: flex;
+
+    gap: 12px;
+
+    align-items: baseline;
+
+    flex-wrap: wrap;
+
+}
+
+
+.panel-number {
+
+    font-weight: 800;
+
+    font-size: .85rem;
+
+    background: #eee7d7;
+
+    padding:
+        5px
+        9px;
+
+    border-radius: 999px;
+
+}
+
+
+.comic-image {
+
+    display: block;
+
+    width:
+        min(
+            100%,
+            620px
+        );
+
+    margin:
+        18px
+        auto;
+
+    border-radius: 14px;
+
+    border:
+        1px solid #ddd;
+
+}
+
+
+.scene {
+
+    color: #555;
+
+}
+
+
+.dialogue {
+
+    border-left:
+        4px
+        solid
+        #222;
+
+    padding-left: 14px;
+
+}
+
+
+details {
+
+    margin-top: 16px;
+
+    color: #5d594f;
+
+}
+
+
+.actions {
+
+    display: flex;
+
+    gap: 10px;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    padding-bottom: 30px;
+
+}
+
+
+.button.secondary {
+
+    background: #6e6a61;
+
+}
+
+
+.success {
+
+    text-align: center;
+
+    margin-top: 15vh;
+
+}
+
+
+.success-icon {
+
+    font-size: 4rem;
+
+    font-weight: 900;
+
+}
+
+
+@media (max-width: 600px) {
+
+    .container {
+
+        padding-top: 28px;
+
+    }
+
+
+    .card {
+
+        padding: 18px;
+
+    }
+
+}
